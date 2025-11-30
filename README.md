@@ -4,7 +4,7 @@ Project Component: Implementation of a persistent Gold Collectable System
 Environment: Godot Engine 4.3 (GDScript)
 Project Type: SIG-Game Official Project 3
 
-Expatation
+Expectation:
 
 Gold items are spawned correctly via the rooms.json definition.
 
@@ -37,27 +37,27 @@ The Gold Collectable System was designed to be modular and scalable, leveraging 
     UI Update: The GameManager.gd updates the internal gold_count and immediately signals the main HUD/UI scene to refresh the on-screen display.
 
 4. Integration with rooms.json
-
-    The system utilizes the existing room generation pipeline to dynamically place gold items.
-
-    Scene Reference: The path to the Gold.tscn scene is registered in the game's asset loading system.
-
-  1. JSON Definition: In the rooms.json file, new entries are created using the defined structure:
-
-    {
-      "type": "Gold", 
-      "position": [5.0, 1.0, -3.0], 
-      "rotation": [0.0, 0.0, 0.0],
-      "custom_vars": {
-        "value": 5 
-      }
-    }
-
-
-  2. Spawning Logic: The room loader script parses this JSON entry.
-
-    It uses type: "Gold" to load the Gold.tscn scene.
-    
-    It applies the specified position and rotation.
-    
-    It checks for custom_vars and, if present, calls the initialize() method on the new Gold node: gold_node.initialize(vars.custom_vars). This sets the gold_value to 5 for that specific instance
+  
+    1. The system utilizes the existing room generation pipeline to dynamically place gold items.
+  
+        Scene Reference: The path to the Gold.tscn scene is registered in the game's asset loading system.
+  
+    2. JSON Definition: In the rooms.json file, new entries are created using the defined structure:
+  
+            {
+              "type": "Gold", 
+              "position": [5.0, 1.0, -3.0], 
+              "rotation": [0.0, 0.0, 0.0],
+              "custom_vars": {
+                "value": 5 
+              }
+            }
+  
+  
+    3. Spawning Logic: The room loader script parses this JSON entry.
+        
+            It uses type: "Gold" to load the Gold.tscn scene.
+            
+            It applies the specified position and rotation.
+            
+            It checks for custom_vars and, if present, calls the initialize() method on the new Gold node: gold_node.initialize(vars.custom_vars). This sets the gold_value to 5 for that specific instance
