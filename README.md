@@ -14,7 +14,7 @@ The gold object is immediately deleted from the scene.
 
 The Player's internal score counter is updated and displayed on the UI.
 
-[Link to Video Demonstration with Audio Explanation]
+[[Link to Video Demonstration with Audio Explanation]](https://docs.google.com/videos/d/15K_VQC2wIMwpkRtvsUmuSea9aNCjG9Jti9PAOPJfI7I/edit?usp=sharing)
 
 Step-by-Step Technical Implementation
 
